@@ -1,13 +1,18 @@
 import UserService from './userService';
 import NominationService from './nominationService';
 import PaymentService from './paymentService';
-import CandidateService from './candiateService';
+import CandidateService from './candidateService';
 import TeamService from './teamService';
 import SupportDocService from './supportDocService';
 import ElectionService from './electionService';
 import DivisionService from './divisionService';
+import ModuleService from './moduleService';
 import ObjectionService from './objectionService';
-import ModuleService from'./moduleService';
+import ActiveElectionService from './activeElectionService';
+import ElectionNominationService from './electionNominationService';
+import UploadService from './uploadService';
+import FieldOptionService from './fieldOptionService';
+
 export {
   UserService,
   PaymentService,
@@ -17,6 +22,10 @@ export {
   SupportDocService,
   ElectionService,
   DivisionService,
+  ModuleService,
   ObjectionService,
-    ModuleService,
+  ActiveElectionService,
+  ElectionNominationService,
+  UploadService,
+  FieldOptionService
 }

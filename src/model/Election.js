@@ -1,16 +1,22 @@
 
-import { Record, List } from 'typed-immutable';
+import { Record, List, Maybe } from 'typed-immutable';
 
-const ElectionTimeLine = Record({
+const electionConfig = Record({
 	key: String(),
-	value: Number(),
+	value: String(),
 });
 
 const Election = Record({
 	id: String(),
 	name: String(),
 	moduleId: String(),
-	electionTimeLine: List(ElectionTimeLine),
+	nominationStart:  Maybe(Number),
+	nominationEnd:  Maybe(Number),
+	objectionStart: Maybe(Number),
+	objectionEnd: Maybe(Number),
+	moduleName: Maybe(String),
+	approval_status: Maybe(String),
+	electionConfig: List(electionConfig),
 });
 
 const AllElection = Record({
@@ -22,7 +28,17 @@ const AllElection = Record({
 	moduleId: String(),
 });
 
+const ElectionWithStatus = Record({
+	id: String(),
+	name: String(),
+	moduleId: String(),
+	createdBy: String(),
+	lastModified: Number(),
+	status: String(),
+})
+
 export {
 	Election,
-	AllElection
+	AllElection,
+	ElectionWithStatus,
 }
